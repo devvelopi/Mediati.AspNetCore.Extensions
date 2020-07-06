@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Description>Extensions for configuring Mediati command, query and event handlers automatically with dependency injection.</Description>
+        <PackageProjectUrl>https://github.com/jaseaman/Mediati.AspNetCore.Extensions</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/jaseaman/Mediati.AspNetCore.Extensions</RepositoryUrl>
+        <PackageTags>mediati mediator</PackageTags>
+        <PackageId>Mediati.AspNetCore.Extensions</PackageId>
+        <SignAssembly>true</SignAssembly>
+        <Version>0.1.0</Version>
+        <Title>Mediati AspNetCore Extensions</Title>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>bin\Debug\Mediati.AspNetCore.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile>bin\Release\Mediati.AspNetCore.xml</DocumentationFile>
+      <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Mediati.Core" Version="0.1.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.0" />
+    </ItemGroup>
+
+</Project>
